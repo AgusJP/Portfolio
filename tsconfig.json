@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "strict": false, // Desactiva el modo estricto
+    "noImplicitAny": false,
+  }
+}

@@ -1,0 +1,60 @@
+---
+import Header from "./Header.astro";
+---
+
+<section id="about" class="aboutContainer">
+  <Header title="About me" subtitle="I've worked for the following companies:"/>
+  <div class="container">
+    <picture>
+      <img class="profile__image" src="/about-me.webp" alt="Profile Image Agustin">
+    </picture>
+    <div class="about">
+      <p>¡Hola! 👋 Soy Agustín, <strong>desarrollador web FullStack</strong> graduado como técnico en desarrollo de aplicaciones multiplataforma y desarrollo de aplicaciones web.</p>
+      <p>Durante esta etapa formativa he participado en diversos proyectos ganando experiencia en tecnologías como Angular y React desarrollando <strong>interfaces de usuario</strong>, además de crear <strong>servicios web</strong> con Node.js y Spring Boot y manejo de <strong>bases de datos</strong>. </p>
+      <p>Mi objetivo es avanzar en mi carrera profesional como desarrollador formando parte de una empresa que me permita aplicar todo lo aprendido hasta ahora y seguir creciendo tanto personal como profesionalmente. Estoy familiarizado con los <strong>principios Agile</strong>, enfocado en escribir <strong>código limpio y escalable</strong>, rápido aprendizaje de nuevas tecnologías, y con entusiasmo para resolver nuevos desafíos.</p>
+      <p>Como pasatiempos me encanta echar un vistazo a las novedades y curiosidades más recientes del sector tecnológico, con tal de ampliar mis conocimientos y estar en <strong>constante evolución</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .aboutContainer {
+    margin: 0;
+    color: white;
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .about {
+    font-size: 1em;
+    background-color: #1c1e23;
+    border-radius: 15px;
+    padding: 25px;
+    width: 100%;
+  }
+
+  strong {
+    color:#28a1cc;
+  }
+
+  picture {
+    display: block;
+    width: 45%;
+  }
+
+  .profile__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    opacity: 0.8;
+  }
+</style>

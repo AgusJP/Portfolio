@@ -1,0 +1,183 @@
+---
+import Header from "./Header.astro";
+---
+
+<section id="experience" class="experienciesContainer">
+  <Header title="Experience" subtitle="I've worked for the following companies:"/>
+  <ol class="experienceList">                  
+    <li class="experience1">
+        <time class="experience__time">Marzo 2023 - Junio 2023</time>
+        <h3 class="experience__position">Desarrollador web FullStack, Becario</h3>
+        <span class="experience__company"><strong>Empresa:</strong> Atmira - Espacio de Consultoría, Córdoba</span>
+        <span class="experience__project"><strong>Proyecto:</strong> Gestión de horarios, encuestas y feedback continuo.</span>
+        <ul class="experience__tasks">
+          <li class="experience__task">Garantizar la robustez del sistema desarrollando nuevos servicios en
+            SpringBoot, como la encriptación de contraseñas, la implementación de
+            tokens para autenticación y autorización, la asignación de roles, y el
+            manejo adecuado de excepciones.</li>
+          <li class="experience__task">Mejorar la experiencia del usuario implementando ajustes visuales en
+            la interfaz, validaciones reactivas de formularios, protección de rutas y
+            navegación más rápida e intuitiva.</li>
+          <li class="experience__task">Aumentar el rendimiento aplicando la carga diferida en los módulos
+            de Angular para que solo se carguen bajo demanda.</li>
+          <li class="experience__task">Optimizar consultas SQL para respuestas más eficientes.</li>
+        </ul>
+    </li>
+    <li class="experience2">
+      <time class="experience__time">Marzo 2023 - Junio 2023</time>
+      <h3 class="experience__position">Desarrollador web FullStack, Becario</h3>
+      <span class="experience__company"><strong>Empresa:</strong> Atmira - Espacio de Consultoría, Córdoba</span>
+      <span class="experience__project"><strong>Proyecto:</strong> Gestión de horarios, encuestas y feedback continuo.</span>
+      <ul class="experience__tasks">
+        <li class="experience__task">Garantizar la robustez del sistema desarrollando nuevos servicios en
+          SpringBoot, como la encriptación de contraseñas, la implementación de
+          tokens para autenticación y autorización, la asignación de roles, y el
+          manejo adecuado de excepciones.</li>
+        <li class="experience__task">Mejorar la experiencia del usuario implementando ajustes visuales en
+          la interfaz, validaciones reactivas de formularios, protección de rutas y
+          navegación más rápida e intuitiva.</li>
+        <li class="experience__task">Aumentar el rendimiento aplicando la carga diferida en los módulos
+          de Angular para que solo se carguen bajo demanda.</li>
+        <li class="experience__task">Optimizar consultas SQL para respuestas más eficientes.</li>
+      </ul>
+  </li>
+  </ol>
+</section>
+
+<style>
+  .experienciesContainer {
+    margin: 0;
+    color: white;
+  }
+
+  .experienceList {
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-auto-rows: auto; 
+    column-gap: 20px;
+    row-gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .experience1, .experience2 {
+    position: relative;
+    background-color: #1c1e23;
+    width: 100%;
+    border-radius: 15px;
+    padding: 30px;
+    overflow: hidden;
+  }
+
+  .experience1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/experience/experience1.avif');
+    background-repeat: no-repeat;
+    background-color: #1c1e23;
+    background-size: cover;
+    opacity: 0.2; 
+    transition: transform .3s ease;
+    border-radius: 15px;
+  }
+
+  .experience2::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/experience/experience2.avif');
+    background-repeat: no-repeat;
+    background-color: #1c1e23;
+    background-size: cover;
+    opacity: 0.2; 
+    transition: transform .3s ease;
+    border-radius: 15px;
+  }
+
+  .experience1:hover::before, .experience2:hover::before {
+    transform: scale(1.1);
+  }
+
+  .experience__position {
+    font-size: 1.4em;
+    margin: 10px 0;
+    font-weight: bold;
+    color: rgb(0, 247, 255);
+  }
+
+  .experience__time {
+    font-weight: bold;
+    font-size: .9em;
+    color: rgb(255, 255, 255);
+
+  }
+
+  .experience__company {
+    display: block;
+    color: rgb(255, 255, 255);
+  }
+
+  .experience__project {
+    display: block;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+  }
+
+  .experience__tasks {
+    opacity: .9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+  }
+
+  .experience__task {
+    position: relative;
+    line-height: 1.5rem;
+  }
+
+  .experience__task::before{ 
+    content: '🎯';
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: -35px;
+  }
+
+  .experience__task:nth-of-type(1)::before {
+    content: '🎯';
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    top: 2px;
+    left: -35px;
+  }
+
+  .experience__task:nth-of-type(2)::before {
+    content: '🎯';
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    top: 1px;
+    left: -35px;
+  }
+
+  .experience__task:nth-of-type(3)::before {
+    content: '🎯';
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    top: 2px;
+    left: -35px;
+  }
+</style>

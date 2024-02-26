@@ -1,0 +1,268 @@
+
+<main id="about" class="container">
+  <section class="profile">
+    <img
+      class="imgprofile"
+      src="/presentation.webp"
+      alt="Linkedin image"
+    />
+    <div class="content">
+      <span class="title">Agustín Jiménez Polonio</span>
+      <span class="subtitle">Full-Stack Web Developer</span>
+      <button
+        ><svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 24 24"
+          height="1.2em"
+          width="1.2em"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            fill="none"
+            stroke-width="2"
+            d="M6,17 C3.23857625,17 1,14.7614237 1,12 C1,9.23857625 3.23857625,7 6,7 L12,7 M6,7 L6,6 C6,3 8,2 11,2 L13,2 C16,2 18,3 18,6 L18,7 C20.7614237,7 23,9.23857625 23,12 C23,14.7614237 20.7614237,17 18,17 M12,12 L12,21 M8,17 L12,21 L16,17"
+          ></path></svg
+        > Download CV</button
+      >
+    </div>
+  </section>
+  <section class="about">
+    <h2>About</h2>
+    <p>
+      FullStack web developer with experience in Angular and React developing
+      user interfaces and creating web services with Node.js and Spring Boot.
+    </p>
+    <p>
+      Familiar with Agile principles, focused on writing clean and scalable
+      code, quick to learn new technologies, and enthusiastic about solving new
+      challenges.
+    </p>
+  </section>
+  <div class="logo logo1">
+    <a
+      rel="nofollow"
+      target="_blank"
+      href="https://www.linkedin.com/in/agustin-jimenez-polonio"
+      ><img src="/linkedin.webp" alt="" /></a
+    >
+  </div>
+  <div class="logo logo2">
+    <a rel="nofollow" target="_blank" href="https://github.com/AgusJP"
+      ><img src="/github.svg" alt="" /></a
+    >
+  </div>
+  <div class="logo logo3">
+    <a
+      rel="nofollow"
+      target="_blank"
+      href="https://www.linkedin.com/in/agustin-jimenez-polonio"
+      ><img src="/gmail.svg" alt="" /></a
+    >
+  </div>
+  <div class="logo logo4">
+    <a rel="nofollow" target="_blank" href="https://www.figma.com/@agusjp"
+      ><img src="/figma.svg" alt="" /></a
+    >
+  </div>
+  <section class="site">
+    <img class="siteimg" src="/cordoba.webp" alt="" />
+    <img class="emoji" src="/emoji.webp" alt="" />
+    <div class="circle"></div>
+    <span>From Córdoba, Spain</span>
+  </section>
+</main>
+
+<style>
+  .container {
+    height: 400px;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.5fr) minmax(
+        0,
+        0.5fr
+      );
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr)) minmax(0, 0.32fr) minmax(0, 0.32fr)
+      minmax(0, 1.25fr);
+    grid-template-areas:
+      "profile profile profile about about about"
+      "profile profile profile about about about"
+      "profile profile profile logo1 logo2 site"
+      "profile profile profile logo3 logo4 site";
+    gap: 15px;
+  }
+
+  .container > * {
+    border-radius: 15px;
+    background-color: #1c1e23;
+    color: white;
+  }
+
+  .container .profile {
+    grid-area: profile;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about {
+    grid-area: about;
+  }
+  .logo {
+    grid-area: logo1;
+  }
+  .logo2 {
+    grid-area: logo2;
+  }
+  .logo3 {
+    grid-area: logo3;
+  }
+  .logo4 {
+    grid-area: logo4;
+  }
+  .site {
+    grid-area: site;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 30px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  }
+
+  .about {
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin: 0 0 16px 0;
+  }
+
+  .about p {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.5em;
+  }
+
+  .title {
+    font-size: 1.6em;
+    font-weight: bold;
+  }
+
+  .subtitle {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 160px;
+    padding: 8px 0;
+    border-radius: 4px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+  }
+
+  .logo {
+    position: relative;
+  }
+
+  .logo a {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  .logo a img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+  }
+
+  .logo a img:hover {
+    transform: scale(1.2);
+  }
+
+  .logo3 a img {
+    width: 60%;
+  }
+
+  .logo3 a img:hover {
+    scale: 1.1;
+  }
+
+  .site {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .siteimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+  }
+
+  .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: #4b5c6a;
+    opacity: 0.8;
+  }
+
+  .emoji {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 34px;
+    height: 46.5px;
+    z-index: 1;
+  }
+
+  .site span {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    margin-bottom: 10px;
+    font-size: 0.9em;
+  }
+
+  .imgprofile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.8;
+  }
+</style>
