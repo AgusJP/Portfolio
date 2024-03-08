@@ -2,10 +2,10 @@
 layout: ../../layouts/BlogLayout.astro
 title: ¡Los métodos más importantes de los arrays en JavaScript! 🚀
 author: Agustín Jiménez Polonio
-description: Descubre los métodos más importantes de los arrays en JavaScript
+description: Domina los métodos esenciales de los arrays en JavaScript para trabajar con ellos de forma eficiente.
 image:
   url: "/assets/posts/metodos-array.webp"
-  alt: "Metodos array icono"
+  alt: "Metodos array thumbnail"
 pubDate: Feb 24, 2024
 tags: ["javascript", "frontend"]
 ---
@@ -108,22 +108,37 @@ Recuerda que la práctica es la mejor forma de aprender. Experimenta con los dif
 
 <style>
   h1 {
+    width: 100%;
     margin-top: 0;
     color: #2cc9ff;
     font-size: 3em;
   }
 
   main {
-    width: 800px;
-    font-size: 18px;
+    width: 100%;
+    font-size: 20px;
+    padding: 0 10px 0 10px;
   }
-
+  
   pre {
+    width: 100%;
     padding: 20px;
     border-radius: 8px;
+    font-size: .8em;
+  }
+
+  code {
+    width: 100%;
   }
 
   p {
+    max-width: 70ch; 
     color: #cbd1d4;
+  }
+
+  @media screen and (max-width: 770px) {
+    h1 {
+      font-size: 2em;
+    }
   }
 </style>

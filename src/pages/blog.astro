@@ -2,17 +2,25 @@
 import BlogLayout from "../layouts/BlogLayout.astro";
 
 const allPosts = await Astro.glob("./posts/*.md");
+
+allPosts.sort((a, b) => {
+  if (Date.parse(a.frontmatter.pubDate) < Date.parse(b.frontmatter.pubDate)) return 1
+  if (Date.parse(a.frontmatter.pubDate) > Date.parse(b.frontmatter.pubDate)) return -1
+  return 0
+});
 ---
 
-<BlogLayout title="Blog">
+<BlogLayout title="Blog | Agustín Jiménez">
   <section>
     <ul>
       {
-        allPosts.reverse().map((post) => (
+        allPosts.map((post) => (
           <li>
             <a href={post.url}>
               <div class="post">
-                <img src={post.frontmatter.image.url} alt={post.frontmatter.image.alt}>
+                <div class="post-image">
+                  <img src={post.frontmatter.image.url} alt={post.frontmatter.image.alt}>
+                </div>
                 <div class="post-content">
                   <h3>{post.frontmatter.title}</h3>
                   <p>{post.frontmatter.description}</p>
@@ -32,24 +40,35 @@ const allPosts = await Astro.glob("./posts/*.md");
     width: 100%;
   }
 
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
   .post {
-    width: 100%;
-    height: 120px;
     display: flex;
     align-items: center;
-    gap: 8px;
     border: 1px solid rgba(38, 38, 38);
     border-radius: 8px;
+    overflow: hidden;
     transition: .3s ease;
-    
   }
 
   .post:hover {
     background-color: #26262666;
   }
 
-  h3 {
-    margin: 0px
+  .post-content h3 {
+    margin-top: 0;
   }
 
   p {
@@ -58,43 +77,36 @@ const allPosts = await Astro.glob("./posts/*.md");
   }
 
   time {
-   color: rgb(163 163 163); 
+    font-style: italic;
+    color: rgb(163 163 163); 
   }
 
   .post-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1em;
     color: white;
+    flex: 1;
+    padding: 20px;
   }
 
-  img {
+  .post-image {
+    align-self: stretch;
+    width: 25%;
+    padding-left: 10px;
+  }
+
+  .post-image img {
+    width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    border
+    object-fit: contain;
   }
 
-  li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  .post-content p {
+    margin-bottom: 10px;
   }
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
+  @media screen and (max-width: 770px) {
+    .post-image {
+      display: none; /* Ocultar la imagen en dispositivos móviles */
+    }
   }
 
-  a {
-    display: block;
-    width: 100%;
-    height: 120px;
-    width: 100%;
-    text-decoration: none;
-  }
 </style>

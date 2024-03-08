@@ -3,38 +3,273 @@ import Header from "./Header.astro";
 ---
 
 <section id="project">
-  <Header title="Projects" subtitle="Here are some projects I've worked on in the past few years:"/>
-  <div class="projects">
-    <div class="project"><img src="/assets/projects/Dalle2.png" alt=""></div>
-    <div class="project"><img src="/assets/projects/Dalle2.png" alt=""></div>
-    <div class="project"><img src="/assets/projects/Dalle2.png" alt=""></div>
-    <div class="project"><img src="/assets/projects/Dalle2.png" alt=""></div>
-    <div class="project"><img src="/assets/projects/Dalle2.png" alt=""></div>
-    <div class="project"><img src="/assets/projects/Dalle2.png" alt=""></div>
+  <Header title="Proyectos" />
+  <div class="container__projects">
+    <div class="project project1">
+      <img src="/assets/projects/dalle.webp" alt="dalle image proyect" />
+      <div class="content">
+        <a class="content__a"
+          href="https://dalle2-pictures-generator.onrender.com/"
+          target="_blank"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 512 512"
+            fill="currentColor"
+            ><path
+              d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112v320c0 44.2 35.8 80 80 80h320c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v112c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16h112c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+            ></path></svg
+          ></a
+        >
+        <div class="content__info">
+          <h3 class="content__title">Picture Generator</h3>
+          <p class="content__description">
+            Un generador de imágenes con inteligencia artifical usando el modelo de lenguaje Dalle2 de OpenAI.
+          </p>
+          <div class="content__tags">
+            <span class="content__tag">Node</span>
+            <span class="content__tag">JavaScript</span>
+            <span class="content__tag">HTML</span>
+            <span class="content__tag">CSS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project project2">
+      <img src="/assets/projects/fast-burger.webp" alt="fast-burger image proyect" />
+      <div class="content">
+        <a class="content__a"
+          href="https://fast-burger.netlify.app/"
+          target="_blank"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 512 512"
+            fill="currentColor"
+            ><path
+              d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112v320c0 44.2 35.8 80 80 80h320c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v112c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16h112c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+            ></path></svg
+          ></a
+        >
+        <div class="content__info">
+          <h3 class="content__title">Fast Burger</h3>
+          <p class="content__description">
+            Diseño de una plataforma de venta de hamburguesas a domicilio.
+          </p>
+          <div class="content__tags">
+            <span class="content__tag">HTML</span>
+            <span class="content__tag">CSS</span>
+            <span class="content__tag">Sass</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project project3">
+      <img src="/assets/projects/wishlist.webp" alt="wishlist image proyect" />
+      <div class="content">
+        <a class="content__a"
+          href="https://wishlist-dream.netlify.app/"
+          target="_blank"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 512 512"
+            fill="currentColor"
+            ><path
+              d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112v320c0 44.2 35.8 80 80 80h320c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v112c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16h112c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+            ></path></svg
+          ></a
+        >
+        <div class="content__info">
+          <h3 class="content__title">WishList</h3>
+          <p class="content__description">
+            Un guardador de listas de deseos, donde podrás guardar, editar, ordenar y elimar tus deseos.
+          </p>
+          <div class="content__tags">
+            <span class="content__tag">React</span>
+            <span class="content__tag">HTML</span>
+            <span class="content__tag">CSS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project project4">
+      <img src="/assets/projects/atmira.webp" alt="atmira image proyect" />
+      <div class="content">
+        <a class="content__a"
+          href="https://github.com/AgusJP/ia-web-frontend"
+          target="_blank"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 512 512"
+            fill="currentColor"
+            ><path
+              d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112v320c0 44.2 35.8 80 80 80h320c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v112c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16h112c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+            ></path></svg
+          ></a
+        >
+        <div class="content__info">
+          <h3 class="content__title">Atmira - IA WEB</h3>
+          <p class="content__description">
+            Una plataforma para gestionar horarios, eventos y obtener retroalimentación de los empleados.
+          </p>
+          <div class="content__tags">
+            <span class="content__tag">Angular</span>
+            <span class="content__tag">Spring Boot</span>
+            <span class="content__tag">Docker</span>
+            <span class="content__tag">Sass</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project project5">
+      <img src="/assets/projects/paises-info.webp" alt="paises image proyect" />
+      <div class="content">
+        <a class="content__a"
+          href="https://country-spotlight.netlify.app/"
+          target="_blank"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 512 512"
+            fill="currentColor"
+            ><path
+              d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112v320c0 44.2 35.8 80 80 80h320c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v112c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16h112c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+            ></path></svg
+          ></a
+        >
+        <div class="content__info">
+          <h3 class="content__title">Country Spotlight</h3>
+          <p class="content__description">
+            Un buscador de países que te brindará información como la población, su capital, su bandera, a que continente pertenece...
+          </p>
+          <div class="content__tags">
+            <span class="content__tag">Angular</span>
+            <span class="content__tag">HTML</span>
+            <span class="content__tag">CSS</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <style>
-  .projects {
-    width: 100%;
+  .container__projects {
+    height: 800px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-auto-rows: auto; 
-    column-gap: 20px;
-    row-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 15px 15px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "project1 project1 project1 project2 project2 project2 project2 project2"
+      "project3 project3 project3 project3 project4 project4 project4 project4"
+      "project5 project5 project5 project5 project4 project4 project4 project4";
+  }
+
+  .content {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  .content__info {
+    padding: 20px;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  }
+
+  .content__title {
+    font-size: 1.4em;
+    margin: 0;
+  }
+
+  .content__tag {
+    border-radius: 8px;
+    background-color: #1c1e23;
+    padding: 5px 10px;
+  }
+
+  .content__a {
+    padding: 15px;
     color: white;
+    align-self: end;
+  }
+
+  .project1 {
+    grid-area: project1;
+  }
+
+  .project2 {
+    grid-area: project2;
+  }
+
+  .project3 {
+    grid-area: project3;
+  }
+
+  .project4 {
+    grid-area: project4;
+  }
+
+  .project5 {
+    grid-area: project5;
   }
 
   .project {
+    position: relative;
     width: 100%;
-    height: 350px;
     background-color: #1c1e23;
     border-radius: 15px;
+    overflow: hidden;
   }
 
   .project img {
     width: 100%;
-    height: 300px;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: .8;
   }
+
+  @media screen and (max-width: 1056px) {
+    .container__projects {
+      height: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-auto-columns: 1fr;
+      gap: 15px 15px;
+      grid-auto-flow: row;
+      grid-template-areas:
+      "project1 project2"
+      "project3 project4"
+      "project5 .";
+      }
+    }
+    @media screen and (max-width: 700px) {
+    .container__projects {
+      height: auto;
+      display: grid;
+      grid-template-columns: 1fr ;
+      grid-template-rows: 1fr;
+      grid-auto-columns: 1fr;
+      gap: 15px 15px;
+      grid-auto-flow: row;
+      grid-template-areas:
+      "project1"
+      "project2"
+      "project3"
+      "project4"
+      "project5";
+      }
+    }
 </style>

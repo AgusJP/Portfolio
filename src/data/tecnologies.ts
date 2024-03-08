@@ -1,62 +1,62 @@
 export const tecnologies: tecnologie[] = [
   {
     name: 'Bootstrap',
-    type: 'CSS Framework',
+    type: 'Framework CSS',
     image: 'assets/tecnologies/bootstrap.svg'
   },
   {
     name: 'JavaScript',
-    type: 'Language',
+    type: 'Lenguaje',
     image: 'assets/tecnologies/javascript.svg'
   },
   {
     name: 'TypeScript',
-    type: 'Language',
+    type: 'Lenguaje',
     image: 'assets/tecnologies/typescript.svg'
   },
   {
     name: 'React',
-    type: 'JavaScript Library',
+    type: 'Librería JavaScript',
     image: 'assets/tecnologies/react.svg'
   },
   {
     name: 'Angular',
-    type: 'JavaScript Framework',
+    type: 'Framework JavaScript',
     image: 'assets/tecnologies/angular.svg'
   },
   {
     name: 'Java',
-    type: 'Language',
+    type: 'Lenguaje',
     image: 'assets/tecnologies/java.svg'
   },
   {
     name: 'Spring Boot',
-    type: 'Java Framework',
+    type: 'Framework Java',
     image: 'assets/tecnologies/spring.svg'
   },
   {
     name: 'Node',
-    type: 'Runtime Environment',
+    type: 'Entorno de ejecución',
     image: 'assets/tecnologies/nodejs.svg'
   },
   {
     name: 'MySql',
-    type: 'Database',
+    type: 'Base de datos',
     image: 'assets/tecnologies/mysql.svg'
   },
   {
     name: 'PostgreSql',
-    type: 'Database',
+    type: 'Base de datos',
     image: 'assets/tecnologies/postgresql.svg'
   },
   {
     name: 'Git',
-    type: 'Version Control',
+    type: 'Control de versiones',
     image: 'assets/tecnologies/git.svg'
   },
   {
     name: 'Docker',
-    type: 'Deployment',
+    type: 'Despliegue',
     image: 'assets/tecnologies/docker.svg'
   },
   {
@@ -71,7 +71,7 @@ export const tecnologies: tecnologie[] = [
   },
   {
     name: 'Figma',
-    type: 'Design',
+    type: 'Diseño',
     image: 'assets/tecnologies/figma.svg'
   },
 ]

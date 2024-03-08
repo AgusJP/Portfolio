@@ -1,11 +1,11 @@
 ---
 layout: ../../layouts/BlogLayout.astro
-title: Todas las novedades de Angular 17
+title: Todas las novedades de Angular 17 ✨
 author: Agustín Jiménez Polonio
-description: Descubre todas las nuevas novedades que trae la última versión de Angular 17
+description: Experimenta un desarrollo web más intuitivo y eficiente con SSR mejorado, sintaxis de control de flujo renovada, carga diferida de componentes y mucho más.
 image:
   url: "/assets/posts/angular17.webp"
-  alt: "Angular 17 icono"
+  alt: "Angular 17 thumbnail"
 pubDate: Feb 11, 2024
 tags: ["angular", "frontend"]
 ---
@@ -111,6 +111,7 @@ Estos son solo algunos ejemplos para ilustrar las nuevas características. Te re
 
 <style>
   h1 {
+    width: 100%;
     margin-top: 0;
     color: #2cc9ff;
     font-size: 3em;
@@ -122,16 +123,30 @@ Estos son solo algunos ejemplos para ilustrar las nuevas características. Te re
   }
 
   main {
-    width: 800px;
-    font-size: 18px;
+    width: 100%;
+    font-size: 20px;
+    padding: 0 10px 0 10px;
   }
   
   pre {
+    width: 100%;
     padding: 20px;
     border-radius: 8px;
+    font-size: .8em;
+  }
+
+  code {
+    width: 100%;
   }
 
   p {
+    max-width: 70ch; 
     color: #cbd1d4;
+  }
+
+  @media screen and (max-width: 770px) {
+    h1 {
+      font-size: 2em;
+    }
   }
 </style>

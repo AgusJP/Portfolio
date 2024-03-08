@@ -4,13 +4,25 @@ import About from "../components/About.astro";
 import Experiencie from "../components/Experiencie.astro";
 import Tecnologies from "../components/Tecnologie.astro";
 import Project from "../components/Project.astro";
+import Footer from "../components/Footer.astro";
 import Layout from "../layouts/PortfolioLayout.astro";
 ---
 
-<Layout title="Welcome to my Portfolio.">
-  <Presentation />
-  <About />
-  <Project />
-  <Experiencie />
-  <Tecnologies />
+<Layout title="Agustín Jiménez | Desarrollador Full-Stack">
+  <section class="sections">
+    <Presentation />
+    <Project />
+    <Experiencie />
+    <About />
+    <Tecnologies />
+    <Footer />
+  </section>
 </Layout>
+
+<style>
+  .sections {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+  }
+</style>

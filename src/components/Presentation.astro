@@ -1,5 +1,5 @@
 
-<main id="about" class="container">
+<main id="presentation" class="container">
   <section class="profile">
     <img
       class="imgprofile"
@@ -8,8 +8,8 @@
     />
     <div class="content">
       <span class="title">Agustín Jiménez Polonio</span>
-      <span class="subtitle">Full-Stack Web Developer</span>
-      <button
+      <span class="subtitle">Desarrollador Web Full-Stack</span>
+      <a class="downloadCV" download="CV_Agustin" href="../../CV_Agustin.pdf"
         ><svg
           stroke="currentColor"
           fill="currentColor"
@@ -23,24 +23,20 @@
             stroke-width="2"
             d="M6,17 C3.23857625,17 1,14.7614237 1,12 C1,9.23857625 3.23857625,7 6,7 L12,7 M6,7 L6,6 C6,3 8,2 11,2 L13,2 C16,2 18,3 18,6 L18,7 C20.7614237,7 23,9.23857625 23,12 C23,14.7614237 20.7614237,17 18,17 M12,12 L12,21 M8,17 L12,21 L16,17"
           ></path></svg
-        > Download CV</button
+        > Descargar CV</a
       >
     </div>
   </section>
   <section class="about">
-    <h2>About</h2>
+    <h2>¡Hola! 👋</h2>
     <p>
-      FullStack web developer with experience in Angular and React developing
-      user interfaces and creating web services with Node.js and Spring Boot.
-    </p>
-    <p>
-      Familiar with Agile principles, focused on writing clean and scalable
-      code, quick to learn new technologies, and enthusiastic about solving new
-      challenges.
+      Técnico en desarrollo de aplicaciones multiplataforma y aplicaciones web. Con conocimentos en el diseño de
+      interfaces de usuario usables y accesibles, creación de servicios webs escalables y gestión de bases de datos. 
     </p>
   </section>
   <div class="logo logo1">
     <a
+      class="socialIcons"
       rel="nofollow"
       target="_blank"
       href="https://www.linkedin.com/in/agustin-jimenez-polonio"
@@ -48,20 +44,21 @@
     >
   </div>
   <div class="logo logo2">
-    <a rel="nofollow" target="_blank" href="https://github.com/AgusJP"
+    <a class="socialIcons" rel="nofollow" target="_blank" href="https://github.com/AgusJP"
       ><img src="/github.svg" alt="" /></a
     >
   </div>
   <div class="logo logo3">
     <a
+      class="socialIcons"
       rel="nofollow"
       target="_blank"
-      href="https://www.linkedin.com/in/agustin-jimenez-polonio"
+      href="mailto:agustinjimenezpolonio@gmail.com"
       ><img src="/gmail.svg" alt="" /></a
     >
   </div>
   <div class="logo logo4">
-    <a rel="nofollow" target="_blank" href="https://www.figma.com/@agusjp"
+    <a class="socialIcons" rel="nofollow" target="_blank" href="https://www.figma.com/@agusjp"
       ><img src="/figma.svg" alt="" /></a
     >
   </div>
@@ -69,7 +66,7 @@
     <img class="siteimg" src="/cordoba.webp" alt="" />
     <img class="emoji" src="/emoji.webp" alt="" />
     <div class="circle"></div>
-    <span>From Córdoba, Spain</span>
+    <span>Córdoba, España</span>
   </section>
 </main>
 
@@ -82,8 +79,8 @@
         0.5fr
       );
     grid-template-columns:
-      repeat(3, minmax(0, 1fr)) minmax(0, 0.32fr) minmax(0, 0.32fr)
-      minmax(0, 1.25fr);
+      repeat(3, minmax(0, 1fr)) minmax(0, 0.25fr) minmax(0, 0.25fr)
+      minmax(0, 1fr);
     grid-template-areas:
       "profile profile profile about about about"
       "profile profile profile about about about"
@@ -137,19 +134,47 @@
   }
 
   .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5em;
     box-sizing: border-box;
     padding: 20px;
+    position: relative;
+  }
+
+  .about::before {
+    position: absolute;
+    background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y), 
+    rgba(255, 255, 255, 0.06),
+    transparent 40%);
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 300ms;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .about:hover::before {
+    opacity: 1;
   }
 
   h2 {
     font-size: 24px;
-    margin: 0 0 16px 0;
+    margin: 0;
   }
 
   .about p {
     font-size: 1rem;
     opacity: 0.9;
     line-height: 1.5em;
+    margin-bottom: 0;
   }
 
   .title {
@@ -162,7 +187,9 @@
     font-weight: bold;
   }
 
-  button {
+  .downloadCV {
+    text-decoration: none;
+    display: block;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -171,6 +198,7 @@
     width: 160px;
     padding: 8px 0;
     border-radius: 4px;
+    background-color: white;
     color: black;
     font-size: 16px;
     font-weight: bold;
@@ -259,10 +287,96 @@
   }
 
   .imgprofile {
-    width: 100%;
-    height: 100%;
+    width: 110%;
+    height: 130%;
     object-fit: cover;
     border-radius: 10px;
     opacity: 0.8;
   }
+
+  @media screen and (max-width: 1150px) {
+    .container {
+      height: 400px;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.5fr) minmax(
+          0,
+          0.5fr
+        );
+      grid-template-columns:
+        repeat(3, minmax(0, .75fr)) minmax(0, 0.30fr) minmax(0, 0.30fr)
+        minmax(0, 1fr);
+      grid-template-areas:
+        "profile profile profile about about about"
+        "profile profile profile about about about"
+        "profile profile profile logo1 logo2 site"
+        "profile profile profile logo3 logo4 site";
+      gap: 15px;
+    } 
+  }
+
+  @media screen and (max-width: 870px) {
+    .container {
+      height: 700px;
+      display: grid;
+      grid-template-rows: repeat(5, minmax(0, 2fr)) repeat(2, minmax(0, 1.5fr)) repeat(3, minmax(0, 1fr));
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr)) repeat(2, minmax(0, .75fr));
+      grid-template-areas:
+        "profile profile profile profile profile profile"
+        "profile profile profile profile profile profile"
+        "profile profile profile profile profile profile"
+        "profile profile profile profile profile profile"
+        "profile profile profile profile profile profile"
+        "about about about about logo1 logo2"
+        "about about about about logo3 logo4"
+        "about about about about site site"
+        "about about about about site site"
+        "about about about about site site";
+      gap: 15px;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .container {
+      height: 700px;
+      display: grid;
+      grid-template-rows: repeat(4, minmax(0, 2.5fr)) repeat(3, minmax(0, 2.5fr)) repeat(4, minmax(0, .75fr));
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr)) repeat(2, minmax(0, .75fr));
+      grid-template-areas:
+        "profile profile profile profile profile profile"
+        "profile profile profile profile profile profile"
+        "profile profile profile profile profile profile"
+        "profile profile profile profile profile profile"
+        "about about about about about about"
+        "about about about about about about"
+        "about about about about about about"
+        "logo1 logo2 site site site site"
+        "logo1 logo2 site site site site"
+        "logo3 logo4 site site site site"
+        "logo3 logo4 site site site site";
+      gap: 15px;
+    }
+
+    .content {
+      padding: 17px;
+    }
+  }
 </style>
+
+<script type="module">
+    const handleOnMouseMove = (e) => {
+      const { currentTarget: target } = e;
+
+      if (target instanceof HTMLElement) {
+      const rect = target.getBoundingClientRect(),
+                  x = e.clientX - rect.left,
+                  y = e.clientY - rect.top;
+
+      target.style.setProperty("--mouse-x", `${x}px`);
+      target.style.setProperty("--mouse-y", `${y}px`);
+      }
+    }
+
+   document.querySelector(".about").addEventListener('mousemove', handleOnMouseMove);   
+</script>

@@ -1,18 +1,17 @@
 <section>
   <p>© {new Date().getFullYear()} Agustín Jiménez Polonio.</p>
   <div class="social">
-    <img src="/linkedin.webp" alt="">
-    <img src="/github.svg" alt="">
-    <img src="/gmail.svg" alt="">
+    <a class="social-link" href="https://www.linkedin.com/in/agustin-jimenez-polonio" target="_blank"><img src="/linkedin.webp" alt="linkedin logo"></a>
+    <a class="social-link" href="https://github.com/AgusJP" target="_blank"><img src="/github.svg" alt="github logo"></a>
+    <a class="social-link" href="mailto:agustinjimenezpolonio@gmail.com" target="_blank"><img src="/gmail.svg" alt="gmail logo"></a>
   </div>
 </section>
 
 <style>
   section {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 50px;
     background-color: #1c1e23;
     color: white;
     border-radius: 15px;
@@ -20,12 +19,24 @@
   }
 
   .social {
+    margin-right: 2em;
     display: flex;
+    align-items: center;
     gap: 10px;
+  }
+
+  .social-link {
+    width: 22px;
+    height: 22px;
   }
 
   img {
     width: 22px;
+    height: 22px;
     opacity: .8;
+  }
+
+  p {
+    margin-left: 2em;
   }
 </style>

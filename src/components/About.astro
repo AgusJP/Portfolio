@@ -3,16 +3,16 @@ import Header from "./Header.astro";
 ---
 
 <section id="about" class="aboutContainer">
-  <Header title="About me" subtitle="I've worked for the following companies:"/>
+  <Header title="Sobre mi"/>
   <div class="container">
     <picture>
       <img class="profile__image" src="/about-me.webp" alt="Profile Image Agustin">
     </picture>
-    <div class="about">
+    <div class="about-large">
       <p>¡Hola! 👋 Soy Agustín, <strong>desarrollador web FullStack</strong> graduado como técnico en desarrollo de aplicaciones multiplataforma y desarrollo de aplicaciones web.</p>
-      <p>Durante esta etapa formativa he participado en diversos proyectos ganando experiencia en tecnologías como Angular y React desarrollando <strong>interfaces de usuario</strong>, además de crear <strong>servicios web</strong> con Node.js y Spring Boot y manejo de <strong>bases de datos</strong>. </p>
-      <p>Mi objetivo es avanzar en mi carrera profesional como desarrollador formando parte de una empresa que me permita aplicar todo lo aprendido hasta ahora y seguir creciendo tanto personal como profesionalmente. Estoy familiarizado con los <strong>principios Agile</strong>, enfocado en escribir <strong>código limpio y escalable</strong>, rápido aprendizaje de nuevas tecnologías, y con entusiasmo para resolver nuevos desafíos.</p>
-      <p>Como pasatiempos me encanta echar un vistazo a las novedades y curiosidades más recientes del sector tecnológico, con tal de ampliar mis conocimientos y estar en <strong>constante evolución</strong>.</p>
+      <p>📚 Durante esta etapa formativa he participado en diversos proyectos ganando experiencia en tecnologías como Angular y React desarrollando <strong>interfaces de usuario</strong>, además de crear <strong>servicios web</strong> con Node.js y Spring Boot y manejo de <strong>bases de datos</strong>. </p>
+      <p>🎯 Mi objetivo es avanzar en mi carrera profesional como desarrollador formando parte de una empresa que me permita aplicar todo lo aprendido hasta ahora y seguir creciendo tanto personal como profesionalmente. Estoy familiarizado con los <strong>principios Agile</strong>, enfocado en escribir <strong>código limpio y escalable</strong>, rápido aprendizaje de nuevas tecnologías, y con entusiasmo para resolver nuevos desafíos.</p>
+      <p>✨ Como pasatiempos me encanta echar un vistazo a las novedades y curiosidades más recientes del sector tecnológico, con tal de ampliar mis conocimientos y estar en <strong>constante evolución</strong>.</p>
     </div>
   </div>
 </section>
@@ -33,12 +33,34 @@ import Header from "./Header.astro";
     width: 100%;
   }
 
-  .about {
+  .about-large {
     font-size: 1em;
     background-color: #1c1e23;
     border-radius: 15px;
     padding: 25px;
     width: 100%;
+    position: relative;
+  }
+
+  .about-large::before {
+    position: absolute;
+    background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y), 
+    rgba(255, 255, 255, 0.06),
+    transparent 40%);
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 300ms;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .about-large:hover::before {
+    opacity: 1;
   }
 
   strong {
@@ -57,4 +79,36 @@ import Header from "./Header.astro";
     border-radius: 15px;
     opacity: 0.8;
   }
+
+  @media screen and (max-width: 870px) {
+    picture {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 745px) {
+    .container {
+      flex-direction: column;
+    }
+    picture {
+      width: 100%;
+    }
+  }
 </style>
+
+<script type="module">
+  const handleOnMouseMove = (e) => {
+    const { currentTarget: target } = e;
+
+    if (target instanceof HTMLElement) {
+    const rect = target.getBoundingClientRect(),
+                x = e.clientX - rect.left,
+                y = e.clientY - rect.top;
+
+    target.style.setProperty("--mouse-x", `${x}px`);
+    target.style.setProperty("--mouse-y", `${y}px`);
+    }
+  }
+
+ document.querySelector(".about-large").addEventListener('mousemove', handleOnMouseMove);   
+</script>

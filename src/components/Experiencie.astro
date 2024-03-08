@@ -3,42 +3,40 @@ import Header from "./Header.astro";
 ---
 
 <section id="experience" class="experienciesContainer">
-  <Header title="Experience" subtitle="I've worked for the following companies:"/>
+  <Header title="Experiencia"/>
   <ol class="experienceList">                  
     <li class="experience1">
         <time class="experience__time">Marzo 2023 - Junio 2023</time>
-        <h3 class="experience__position">Desarrollador web FullStack, Becario</h3>
-        <span class="experience__company"><strong>Empresa:</strong> Atmira - Espacio de Consultoría, Córdoba</span>
-        <span class="experience__project"><strong>Proyecto:</strong> Gestión de horarios, encuestas y feedback continuo.</span>
+        <h3 class="experience__position">Desarrollador web Full-Stack, Becario</h3>
+        <span class="experience__company"><strong>Empresa:</strong> Atmira - Espacio de Consultoría, Córdoba.</span>
+        <span class="experience__project">Como Scrum Master, gestioné un equipo de 3 personas en un proyecto académico en colaboración
+          con Atmira. Desarrollamos una plataforma que permite la gestión de horarios, eventos y proporciona
+          retroalimentación continua a los empleados mediante encuestas.</span>
         <ul class="experience__tasks">
-          <li class="experience__task">Garantizar la robustez del sistema desarrollando nuevos servicios en
-            SpringBoot, como la encriptación de contraseñas, la implementación de
-            tokens para autenticación y autorización, la asignación de roles, y el
-            manejo adecuado de excepciones.</li>
-          <li class="experience__task">Mejorar la experiencia del usuario implementando ajustes visuales en
-            la interfaz, validaciones reactivas de formularios, protección de rutas y
-            navegación más rápida e intuitiva.</li>
-          <li class="experience__task">Aumentar el rendimiento aplicando la carga diferida en los módulos
-            de Angular para que solo se carguen bajo demanda.</li>
-          <li class="experience__task">Optimizar consultas SQL para respuestas más eficientes.</li>
+          <li class="experience__task">Garantizar la robustez del software desarrollando nuevos servicios en Spring Boot, como la
+            implementación de tokens para autenticación y autorización, asignación de roles, protección
+            de rutas y el manejo adecuado de excepciones.
+            </li>
+          <li class="experience__task">Mejorar la experiencia de usuario implementando ajustes visuales en la interfaz, permitiendo
+            una navegación más rápida e intuitiva.</li>
+          <li class="experience__task">Aumentar el rendimiento aplicando la carga diferida en los módulos de Angular.
+          </li>
+          <li class="experience__task">Optimizar consultas SQL para respuestas más eficientes.
+          </li>
         </ul>
     </li>
     <li class="experience2">
-      <time class="experience__time">Marzo 2023 - Junio 2023</time>
-      <h3 class="experience__position">Desarrollador web FullStack, Becario</h3>
-      <span class="experience__company"><strong>Empresa:</strong> Atmira - Espacio de Consultoría, Córdoba</span>
-      <span class="experience__project"><strong>Proyecto:</strong> Gestión de horarios, encuestas y feedback continuo.</span>
+      <time class="experience__time">Septiembre 2021 - Enero 2022</time>
+      <h3 class="experience__position">Desarrollador web Front-End, Becario</h3>
+      <span class="experience__company"><strong>Empresa:</strong> Siscom Ingeniería S.L, Córdoba.</span>
+      <span class="experience__project">Grandes superficies de Córdoba (B2B) - Gestión de inventario.</span>
       <ul class="experience__tasks">
-        <li class="experience__task">Garantizar la robustez del sistema desarrollando nuevos servicios en
-          SpringBoot, como la encriptación de contraseñas, la implementación de
-          tokens para autenticación y autorización, la asignación de roles, y el
-          manejo adecuado de excepciones.</li>
-        <li class="experience__task">Mejorar la experiencia del usuario implementando ajustes visuales en
-          la interfaz, validaciones reactivas de formularios, protección de rutas y
-          navegación más rápida e intuitiva.</li>
-        <li class="experience__task">Aumentar el rendimiento aplicando la carga diferida en los módulos
-          de Angular para que solo se carguen bajo demanda.</li>
-        <li class="experience__task">Optimizar consultas SQL para respuestas más eficientes.</li>
+        <li class="experience__task">Generar gráficas e informes detallados en React para evaluar el rendimiento de diversos
+          procesos, incluyendo indicadores (KPI) relacionados con ventas, ingresos, productos,
+          clientes… permitiendo a la empresa optimizar sus operaciones de manera eficiente.</li>
+        <li class="experience__task">Mejorar el rendimiento de la aplicación llevando a cabo la migración de Redux al Context API
+          de React e implementando la navegación de una sola página(SPA).
+          </li>
       </ul>
   </li>
   </ol>
@@ -124,6 +122,7 @@ import Header from "./Header.astro";
   .experience__company {
     display: block;
     color: rgb(255, 255, 255);
+    margin-bottom: 1em;
   }
 
   .experience__project {
@@ -179,5 +178,11 @@ import Header from "./Header.astro";
     position: absolute;
     top: 2px;
     left: -35px;
+  }
+
+  @media screen and (max-width: 500px) {
+    .experienceList {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
